@@ -1,0 +1,71 @@
+Window {
+	width <1000>
+	height <600>
+}
+
+Camera {
+	fov <50>
+	origin <0, 0, 0>
+	direction <0, 0, -1>
+	anti_aliasing <1>
+	sh_grain <1>
+	Film {
+		ldr		<0>
+		//takes long longer
+		quantize <0>
+		exposure <1.4>
+	}
+	Transformation
+	{
+		scale <1, 1, 1>
+		rotation <0, 0, 0>
+		translation <0, 0, 0>
+	}
+}
+
+Light {
+	color <255, 255, 255>
+	Transformation {
+		scale <3, 3, 3>
+		rotation <0, 0, 0>
+		translation <0, 0, 0>
+		}
+}
+
+//Csg{Union{Left{
+	Cylinder {
+		Transformation {
+				scale <10, 10, 30>
+				rotation <-60, 0, 0>
+				translation <0, -40, -100>
+			}
+		Material {
+				Texture {
+					type "simple"
+					color_a <200, 150, 100>
+					}
+					lambert <0.8>
+					specular <0.5>
+					ambient <0.2>
+					reflective <0>
+			}
+		}
+//	}}}
+
+Plane {
+	Transformation {
+			scale <200, 200, 200>
+			rotation <0, 0, 0>
+			translation <0, -20, -180>
+		}
+	Material {
+			Texture {
+				type "simple"
+				color_a <100, 150, 200>
+				}
+				lambert <0.8>
+				specular <0.5>
+				ambient <0.2>
+				reflective <0.7>
+		}
+	}

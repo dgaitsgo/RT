@@ -1,0 +1,40 @@
+Window {
+	width <1000>
+	height <600>
+}
+
+Camera {
+	fov <60>
+	sh_grain <1>
+	origin <0, 0, 0>
+	direction <0, 0, 1>
+	Transformation {
+		scale <1, 1, 1>
+		rotation <0, 0, 0>
+		translation <0, 0, 0>
+	}
+}
+
+Light {
+	color <200, 200, 200>
+	Transformation {
+		scale <3, 3, 3>
+		rotation <0, 0, 0>
+		translation <0, 10, -10>
+		}
+}
+
+Cylinder {
+	Transformation {
+	scale <4, 4, 4>
+	rotation <60, 40, 40>
+	translation <0, 20, 90>
+	}
+	Material {
+	color <0, 0, 250>
+	lambert <.6>
+	specular <0.4>
+	ambient <0.2>
+	reflective <0>
+	}
+}

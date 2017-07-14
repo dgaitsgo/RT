@@ -1,0 +1,54 @@
+Window {
+	width <1000>
+	height <600>
+}
+
+Camera {
+	fov <50>
+	origin <0, 0, 0>
+	direction <0, 0, -1>
+	anti_aliasing <0>
+	sh_grain <1>
+	Film {
+		ldr		<0>
+		//takes slightly longer
+		quantize <0>
+		exposure <1.4>
+	}
+	Transformation
+	{
+		scale <1, 1, 1>
+		rotation <0, 0, 0>
+		translation <0, 0, 0>
+	}
+}
+
+Light {
+	color <200, 200, 200>
+	Transformation {
+		scale <3, 3, 3>
+		rotation <0, 0, 0>
+		translation <100, 20, -20>
+		}
+}
+
+Plane {
+	Transformation {
+	scale <100, 100, 100>
+	rotation <90, 0, 0>
+	translation <0, -20, -250>
+	}
+	Material {
+			Texture {
+					type "marble"
+					color_a <150, 150, 150>
+					color_b <0, 0, 0>
+					turb_size <16>
+					turb_power <64>
+				}
+			lambert <.4>
+			specular <0.6>
+			ambient <0.2>
+			reflective <0.0>
+		}
+}

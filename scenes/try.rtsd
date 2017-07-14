@@ -1,0 +1,164 @@
+Window {
+	width <1000>
+	height <600>
+}
+
+Camera {
+	fov <50>
+	origin <0, 0, 0>
+	direction <0, 0, 1>
+	anti_aliasing <0>
+	sh_grain <1>
+	Film {
+		ldr		<0>
+		//takes slightly longer
+		quantize <0>
+		exposure <1.4>
+	}
+	Transformation
+	{
+		scale <1, 1, 1>
+		rotation <0, 0, 0>
+		translation <0, 0, 0>
+	}
+}
+
+Light {
+	color <200, 200, 200>
+	Transformation {
+		scale <3, 3, 3>
+		rotation <0, 0, 0>
+		translation <50, 50, 100>
+		}
+}
+
+Csg {
+		Difference {
+		Left {
+			Sphere {
+				Transformation {
+				scale <20, 20, 20>
+				rotation <0, 0, 0>
+				translation <-40, 0, 170>
+				}
+				Material {
+					Texture {
+						type "extern"
+						file "brick_modern"
+						color_a <200, 180, 180>
+						color_b <20, 20, 40>
+						repetition <1, 1, 1>
+						}
+				lambert <0.2>
+				specular <0.0>
+				ambient <.2>
+				reflective <0.0>
+					}
+				}
+			}
+		Right {
+			Cylinder {
+				Transformation {
+				scale <10, 10, 60>
+				rotation <-80, 0, 80>
+				translation <-70, 0, 160>
+				}
+				Material {
+					Texture {
+						type "extern"
+						file "brick_modern"
+						color_a <200, 180, 180>
+						color_b <20, 20, 40>
+						repetition <1, 1, 1>
+						}
+				lambert <.2>
+				specular <0.0>
+				ambient <.2>
+				reflective <0.0>
+				}
+			}
+		}}
+}
+
+Plane {
+	Transformation {
+	scale <300, 300, 300>
+	rotation <0, 0, 0>
+	translation <0, -20, 250>
+	}
+	Material {
+			Texture {
+					type "extern"
+					file "metal"
+					color_a <150, 150, 150>
+					color_b <0, 0, 0>
+					repetition <10, 10, 1>
+				}
+			lambert <.4>
+			specular <0.6>
+			ambient <0.2>
+			reflective <1>
+		}
+}
+
+Csg {Union{Left{
+Cylinder {
+		Transformation {
+		scale <10, 10, 60>
+		rotation <80, 0, 80>
+		translation <-70, 40, 160>
+		}
+		Material {
+			Texture {
+				type "marble"
+				color_a <200, 180, 180>
+				color_b <20, 20, 40>
+				repetition <1, 1, 1>
+				}
+		lambert <.2>
+		specular <0.0>
+		ambient <.2>
+		reflective <0.0>
+		}
+	}
+}}}
+
+Cone {
+		Transformation {
+		scale <15, 15, 60>
+		rotation <-90, 0, 30>
+		translation <70, 10, 160>
+		}
+		Material {
+			Texture {
+				type "extern"
+				file "metal_tread_plate"
+				color_a <200, 180, 180>
+				color_b <20, 20, 40>
+				repetition <1, 1, 1>
+				}
+		lambert <.2>
+		specular <0.0>
+		ambient <.2>
+		reflective <0.0>
+		}
+	}
+
+Sphere {
+	Transformation {
+	scale <500, 500, 500>
+	rotation <0, 0, 180>
+	translation <0, 0, 0>
+	}
+	Material {
+		Texture {
+			type "extern"
+			file "starry_night"
+			repetition <10, 10, 10>
+			}
+	lambert <0>
+	specular <0>
+	ambient <1>
+	reflective <0>
+		}
+}

@@ -1,0 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   kd_trees.h                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dgaitsgo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/11/01 15:08:04 by dgaitsgo          #+#    #+#             */
+/*   Updated: 2017/03/08 10:58:39 by dgaitsgo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef kd_trees_h
+#define kd_trees_h
+
+# include "bbox.h"
+# include "object.h"
+
+typedef	struct s_kd_node
+{
+    t_bbox              bbox;
+    struct_s_kd_nod 	*left;
+    struct_s_kd_nod		*right;
+    t_object            **objects;
+}	t_kd_node;
+
+#endif

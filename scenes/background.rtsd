@@ -1,0 +1,78 @@
+Window {
+	width <1000>
+	height <600>
+}
+
+Camera {
+	fov <50>
+	origin <0, 0, 0>
+	direction <0, 0, 1>
+	anti_aliasing <0>
+	sh_grain <1>
+	Film {
+		ldr		<0>
+		//takes slightly longer
+		quantize <0>
+		exposure <1.4>
+	}
+	Transformation
+	{
+		scale <1, 1, 1>
+		rotation <0, 0, 0>
+		translation <0, 0, 0>
+	}
+}
+
+Light {
+	color <200, 200, 200>
+	Transformation {
+		scale <3, 3, 3>
+		rotation <0, 0, 0>
+		translation <100, 20, -20>
+		}
+}
+
+Sphere {
+	Transformation {
+	scale <500, 500, 500>
+	rotation <0, 0, 0>
+	translation <0, 0, 0>
+	}
+	Material {
+		Texture {
+			type "extern"
+			file "starry_night"
+			color_a <20, 20, 20>
+			repetition <10, 10, 10>
+			}
+	lambert <0>
+	specular <0>
+	ambient <1>
+	reflective <0>
+		}
+}
+
+Mesh
+{
+ 	//url "./object_files/monkeyTriangulated.obj"
+	url "./object_files/completeTriangleCube.obj"
+	Transformation
+	{
+		scale <10, 10, 10>
+		rotation <45, 0, 45>
+		translation <10, -6, 70>
+	}
+	Material
+	{
+		color <130, 155, 95>
+		lambert <.6>
+		specular <.2>
+		ambient <.2>
+		reflective <0.5>
+		Texture {
+			type "marble"
+			color_a <255, 255, 255>
+			color_b <0, 0, 0>
+			}
+	}
+}
