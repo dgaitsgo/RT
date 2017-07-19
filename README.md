@@ -205,7 +205,7 @@ RT can apply bitmap files and Perlin-noise as textures.
 example:
 
 	Texture {
-		//looks 'starry_night' in '../textures/'
+		//looks for 'starry_night' in '../textures/'
 		type "extern"
 		file "starry_night"
 	}
