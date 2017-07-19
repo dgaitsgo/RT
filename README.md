@@ -25,6 +25,11 @@ This document will explain :
 RT has so far only been tested on Mac Mavericks through Yosemite.
 You will need to install [SDL](https://www.libsdl.org/download-2.0.php).
 
+### Take Off
+
+	make
+	./rt ./example.rtsdf
+
 ## .rtsdf - Ray Tracing Description File
 A complete scene will have the following Elements specified by the user:
 ```
