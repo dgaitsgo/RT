@@ -9,6 +9,7 @@ Camera {
 	direction <0, 0, 1>
 	sh_grain <1>
 	Film {
+		ldr <1>
 		exposure <1.4>
 	}
 	Transformation
