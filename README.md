@@ -53,7 +53,7 @@ example :
 	}
 
 #### Camera
-The ```Camera``` is a point camera from where rays will originate but other aspects of the scene may be described here. Its characteristics include Sub Elements include : ```fov``` (the camera's field of view), ```origin```, ```direction```, ```anti_aliasing```, ```sh_grain``` (the graininess of the soft shadows) . It accepts the sub-elements ```Transformation``` and ```Film```.
+The ```Camera``` is a point camera from where rays will originate but other aspects of the scene may be described here. Its fields are : ```fov``` (the camera's field of view), ```origin```, ```direction```, ```anti_aliasing```, ```sh_grain``` (the graininess of the soft shadows) . It accepts the sub-elements ```Transformation``` and ```Film```.
 
 example : 
 
@@ -75,8 +75,8 @@ example :
 	}
 
 #### Film
-One can apply a few effects to the rendered image by specifying characteristics :
- ```ldr``` - (Low Dynamic Range) Tonemaps the image 
+One can apply a few effects to the rendered image by specifying the fields:
+ ```ldr``` - (Low Dynamic Range) which tonemaps the image 
  ```quantize```  - Produces an 8-bit effect by reducing the color range and looking for the nearest-neighbor.
   ```exposure``` - increase image's brightness
 
@@ -90,7 +90,7 @@ example :
 
 #### Transformation
 Transformation combines the ```scale```, ```rotation``` and ```transformation``` vectors to generate a transformation matrix.
-Can be applied to shapes, ```Camera``` and  ```Light``  elements.
+Can be applied to shapes, ```Camera``` and  ```Light```  elements.
 
 example :
 
@@ -120,7 +120,7 @@ example :
 Accepts sub-elements ```Transformation``` and ```Material```.
 
 ##### Primitives
-RT renders the primitives ```Plane```, ```Sphere```, ```Cylinder```, ```Cone```, ```Triangle``` and ```Cube```. ```Mesh```. 
+RT renders the primitives ```Plane```, ```Sphere```, ```Cylinder```, ```Cone```, ```Triangle``` and ```Cube```. 
 
 example :
 	
@@ -177,7 +177,7 @@ Example :
 
 
 #### Materials
-A user may specify an object's ```color```, Phong-shading coefficients : ```lambert```, ```specular```, ```ambient```, ```refraction``` and ```reflective```.
+A user may specify an object's ```color```, Phong-shading coefficients : ```lambert```, ```specular```, ```ambient```, and the amount of ```refraction```/```reflective```.
 
 Under ```Material```, one can specify a ```Texture```.
 
