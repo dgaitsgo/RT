@@ -237,12 +237,12 @@ Number of samples per pixel from the default four.
 
 
 ```C
-	# define AA_SAMPLES 4
+# define AA_SAMPLES 4
 ```
 ##### Multi-threading
 Number of threads to run.
 
  ```C
-	# define NTHREAD 1
+# define NTHREAD 1
 ```
 
